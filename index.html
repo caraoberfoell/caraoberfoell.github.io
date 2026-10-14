@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cara Oberfoell | UI/UX Designer</title>
+  <meta name="description" content="Cara Oberfoell is a UI/UX designer who redesigns enterprise software for mission-critical systems.">
+
+  <!-- Font: Public Sans (free from Google Fonts). If your Figma uses a different font, tell me and I'll swap it. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+<div class="frame">
+
+  <!-- ================= HEADER / NAV ================= -->
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="Cara Oberfoell, home"><span>cara</span></a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <!-- WORK LINK: points to the highlights section for now.
+             When you build a Work page, change it to href="work.html" -->
+        <li><a href="#work">Work</a></li>
+        <li class="nav-secondary"><a href="mailto:your.email@example.com">Email me</a></li>
+        <li class="nav-secondary"><a href="resume.pdf">Resume</a></li>
+      </ul>
+      <button class="menu-button" id="menu-button" aria-expanded="false" aria-controls="nav" aria-label="Show more links">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero-mark" aria-hidden="true">
+        <svg class="chevrons" viewBox="0 0 270 130" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="0,0 58,0 122,48 122,82 58,130 0,130 70,65"/>
+          <polygon points="148,0 206,0 270,48 270,82 206,130 148,130 218,65"/>
+        </svg>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">
+          <strong>Cara Oberfoell</strong>
+          <span>· UI/UX Designer</span>
+          <span>· Mission-critical systems</span>
+        </p>
+        <h1>I redesign enterprise software to bring <em>clarity</em> to <em>complexity.</em></h1>
+      </div>
+    </section>
+
+    <!-- ================= WORK HIGHLIGHTS ================= -->
+    <section class="highlights" id="work">
+      <h2 class="section-title">Selected Work <svg class="chevrons" viewBox="0 0 270 130" aria-hidden="true"><polygon points="0,0 58,0 122,48 122,82 58,130 0,130 70,65"/><polygon points="148,0 206,0 270,48 270,82 206,130 148,130 218,65"/></svg></h2>
+      <p class="note">
+        Client confidentiality limits what I can share publicly.<br>
+        The examples below highlight selected aspects of my work.
+      </p>
+
+      <!-- TO ADD A PROJECT: copy one <li>...</li> block, change the image, alt text and page link,
+           then copy project-1.html to a new file (for example project-4.html) and edit it. -->
+      <ul class="gallery">
+        <li><a href="project-1.html"><img src="images/project-1.svg" alt="Mobile app screens for a data privacy product. Opens the case study."></a></li>
+        <li><a href="project-2.html"><img src="images/project-2.svg" alt="Interactive touchscreen wall at an automotive event. Opens the case study."></a></li>
+        <li><a href="project-3.html"><img src="images/project-3.svg" alt="Interactive touchscreen wall at an automotive event, second view. Opens the case study."></a></li>
+      </ul>
+    </section>
+
+    <!-- ================= WORKING PRINCIPLES ================= -->
+    <section class="principles">
+      <h2 class="section-title">Working Principles <svg class="chevrons" viewBox="0 0 270 130" aria-hidden="true"><polygon points="0,0 58,0 122,48 122,82 58,130 0,130 70,65"/><polygon points="148,0 206,0 270,48 270,82 206,130 148,130 218,65"/></svg></h2>
+
+      <div class="principles-grid">
+        <article>
+          <h3>01 Work as a team</h3>
+          <p>I don’t have all the answers, but I will do my darndest to have more than when we started.</p>
+        </article>
+        <article>
+          <h3>02 Iterate often</h3>
+          <p>The sooner we can find out something isn’t working, the sooner we can move toward something that will.</p>
+        </article>
+        <article>
+          <h3>03 In service to the goal</h3>
+          <p>The work isn't about proving a design is right. It's about making the product better.</p>
+        </article>
+        <article>
+          <h3>04 Make it useful</h3>
+          <p>Mounds of artifacts that go unread aren't particularly useful. I’d rather spend that time on solutions we can actually implement.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= BEHIND THE WORK ================= -->
+    <section class="about">
+      <h2 class="section-title about-title">Behind the Work <svg class="chevrons" viewBox="0 0 270 130" aria-hidden="true"><polygon points="0,0 58,0 122,48 122,82 58,130 0,130 70,65"/><polygon points="148,0 206,0 270,48 270,82 206,130 148,130 218,65"/></svg></h2>
+
+      <div class="about-text">
+        <p>I’m Cara Oberfoell. Naturally curious, I’ve spent the last 14 years examining products and workflows to understand how they work and where they can improve. For me, design isn't just about making software look good. It's about making complex interactions feel straightforward, so people can focus on the work rather than the interface.</p>
+        <p>Outside of work, I'm usually reading a mystery, playing a video game, or working through a puzzle. I enjoy a good challenge, especially when the pieces finally come together.</p>
+      </div>
+
+      <figure class="about-photo">
+        <img src="images/cara.svg" alt="Portrait of Cara Oberfoell">
+      </figure>
+
+      <span class="watermark" aria-hidden="true">cara</span>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  // Mobile menu: the hamburger button shows/hides "Email me" and "Resume".
+  var button = document.getElementById('menu-button');
+  var nav = document.getElementById('nav');
+  button.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    button.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive touchscreen wall | Cara Oberfoell</title>
+  <meta name="description" content="Case study: [one-sentence description of this project].">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+<div class="frame">
+
+  <!-- ================= HEADER / NAV (same as the homepage) ================= -->
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Cara Oberfoell, home"><span>cara</span></a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li class="nav-secondary"><a href="mailto:your.email@example.com">Email me</a></li>
+        <li class="nav-secondary"><a href="resume.pdf">Resume</a></li>
+      </ul>
+      <button class="menu-button" id="menu-button" aria-expanded="false" aria-controls="nav" aria-label="Show more links">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= TITLE ================= -->
+    <section class="case-hero">
+      <p class="eyebrow"><strong>Case study</strong> <span>· Project type or industry</span></p>
+      <h1>Interactive touchscreen wall</h1>
+      <p class="lede">[One or two sentences: what the product is and the headline result of your work.]</p>
+    </section>
+
+    <!-- ================= QUICK FACTS ================= -->
+    <dl class="facts">
+      <div><dt>Role</dt><dd>[Your role]</dd></div>
+      <div><dt>Team</dt><dd>[Who you worked with]</dd></div>
+      <div><dt>Timeline</dt><dd>[How long]</dd></div>
+      <div><dt>Platform</dt><dd>[Mobile, web, kiosk...]</dd></div>
+    </dl>
+
+    <!-- ================= THE PROBLEM ================= -->
+    <section class="case-section">
+      <h2>The problem</h2>
+      <div class="content">
+        <p>[Describe what wasn't working: who the users were, what slowed them down, and what was at stake. Two to four sentences is plenty.]</p>
+      </div>
+    </section>
+
+    <!-- ================= WHAT I DID ================= -->
+    <section class="case-section">
+      <h2>What I did</h2>
+      <div class="content">
+        <!-- Add or remove <li> lines as needed -->
+        <ul class="steps">
+          <li>[A key step or decision, and why you made it.]</li>
+          <li>[Another step: research, testing, a design change.]</li>
+          <li>[Another step: how you worked with the team.]</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= SELECTED VISUALS =================
+         The first figure spans the full width; the rest sit two across.
+         Skip this block if you can't share visuals for this project. -->
+    <section class="case-figures" aria-label="Selected visuals">
+      <figure>
+        <img src="images/project-2.svg" alt="[Describe what this image shows]">
+        <figcaption>[Short caption.]</figcaption>
+      </figure>
+      <figure>
+        <img src="images/project-2.svg" alt="[Describe what this image shows]">
+        <figcaption>[Short caption.]</figcaption>
+      </figure>
+      <figure>
+        <img src="images/project-2.svg" alt="[Describe what this image shows]">
+        <figcaption>[Short caption.]</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= OUTCOME ================= -->
+    <section class="case-outcome">
+      <h2 class="section-title">Outcome <svg class="chevrons" viewBox="0 0 270 130" aria-hidden="true"><polygon points="0,0 58,0 122,48 122,82 58,130 0,130 70,65"/><polygon points="148,0 206,0 270,48 270,82 206,130 148,130 218,65"/></svg></h2>
+      <p>[What improved. Use numbers if you have them, or describe the change in how people worked.]</p>
+    </section>
+
+    <!-- ================= BACK / NEXT ================= -->
+    <nav class="case-nav" aria-label="Case study navigation">
+      <a href="index.html#work">&lt;&lt; Back to work</a>
+      <a href="project-3.html">Next project &gt;&gt;</a>
+    </nav>
+
+  </main>
+</div>
+
+<script>
+  var button = document.getElementById('menu-button');
+  var nav = document.getElementById('nav');
+  button.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    button.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+</body>
+</html>

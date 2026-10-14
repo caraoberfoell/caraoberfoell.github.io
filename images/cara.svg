@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Placeholder portrait">
+  <rect width="400" height="400" fill="#06161b"/>
+  <circle cx="200" cy="150" r="70" fill="#123c44"/>
+  <path d="M60 400c0-90 60-140 140-140s140 50 140 140z" fill="#123c44"/>
+  <text x="200" y="385" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#7ff2d9">Replace: images/cara</text>
+</svg>

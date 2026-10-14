@@ -1,0 +1,154 @@
+/* =========================================================
+   CASE STUDY PAGES
+   Used only by project-1.html, project-2.html, project-3.html.
+   Colors, fonts and spacing come from the :root block in
+   style.css, so changing them there updates these pages too.
+   ========================================================= */
+
+/* ---------- Title block ---------- */
+.case-hero {
+  padding: clamp(36px, 5vw, 80px) var(--section-pad) clamp(36px, 5vw, 72px);
+  border-bottom: 1px solid var(--line);
+}
+.case-hero .eyebrow { margin-bottom: clamp(24px, 3vw, 44px); }
+.case-hero h1 { max-width: 16em; }
+.lede {
+  margin-top: clamp(22px, 2.5vw, 36px);
+  max-width: 36em;
+  font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.5rem);
+  line-height: 1.35;
+}
+
+/* ---------- Quick facts (role, team, timeline, platform) ---------- */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+}
+.facts > div {
+  padding: clamp(18px, 2vw, 28px) clamp(16px, 2vw, 32px);
+  border-right: 1px solid var(--line);
+}
+.facts > div:last-child { border-right: 0; }
+.facts dt {
+  color: var(--mint);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+.facts dd { margin: 10px 0 0; }
+
+/* ---------- Text sections: label on the left, content on the right ---------- */
+.case-section {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  border-bottom: 1px solid var(--line);
+}
+.case-section > h2 {
+  padding: var(--section-pad);
+  border-right: 1px solid var(--line);
+  color: var(--mint);
+  font-size: clamp(1rem, 0.8rem + 0.6vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.case-section .content {
+  padding: var(--section-pad) clamp(24px, 3.7vw, 60px);
+}
+.case-section .content p { max-width: 38em; }
+.case-section .content p + p { margin-top: 1.2em; }
+
+/* List with small ">" markers */
+.steps { max-width: 38em; }
+.steps li { position: relative; padding-left: 1.6em; }
+.steps li + li { margin-top: 0.9em; }
+.steps li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--mint);
+  font-weight: 800;
+}
+
+/* ---------- Visuals ---------- */
+.case-figures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(14px, 1.6vw, 26px);
+  padding: var(--section-pad);
+  border-bottom: 1px solid var(--line);
+}
+.case-figures figure:first-child { grid-column: 1 / -1; }
+.case-figures img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+.case-figures figcaption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* ---------- Outcome panel (same teal look as Working Principles) ---------- */
+.case-outcome {
+  padding: var(--section-pad);
+  padding-bottom: clamp(40px, 5vw, 80px);
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(rgba(127, 242, 217, 0.07) 1px, transparent 1.5px) 0 0 / 16px 16px,
+    linear-gradient(110deg, var(--panel-start), var(--panel-end));
+}
+.case-outcome .chevrons { fill: #0f7882; }
+.case-outcome p {
+  margin-top: clamp(24px, 3vw, 44px);
+  max-width: 38em;
+  font-size: clamp(1.05rem, 0.9rem + 0.5vw, 1.4rem);
+}
+
+/* ---------- Back / next links ---------- */
+.case-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: clamp(28px, 3vw, 44px) var(--section-pad);
+}
+.case-nav a {
+  color: var(--mint);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.case-nav a:hover, .case-nav a:focus-visible { text-decoration: underline; text-underline-offset: 6px; }
+
+/* Hover effect for the thumbnails on the homepage */
+.gallery a { display: block; }
+.gallery a img { transition: outline-color 0.15s ease, filter 0.15s ease; outline: 1px solid transparent; outline-offset: 4px; }
+.gallery a:hover img, .gallery a:focus-visible img { outline-color: var(--mint); filter: brightness(1.12); }
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+@media (max-width: 820px) {
+  .facts { grid-template-columns: 1fr 1fr; }
+  .facts > div { border-bottom: 1px solid var(--line); }
+  .facts > div:nth-child(2n) { border-right: 0; }
+  .facts > div:nth-last-child(-n+2) { border-bottom: 0; }
+
+  .case-section { grid-template-columns: 1fr; }
+  .case-section > h2 {
+    padding: 24px 22px 0;
+    border-right: 0;
+  }
+  .case-section .content { padding: 16px 22px 32px; }
+
+  .case-figures { grid-template-columns: 1fr; padding: 28px 22px; }
+  .case-outcome { padding: 28px 22px 40px; }
+  .case-hero { padding: 28px 22px 34px; }
+  .case-nav { padding: 28px 22px; flex-wrap: wrap; }
+}
