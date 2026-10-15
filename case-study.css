@@ -82,7 +82,8 @@
   padding: var(--section-pad);
   border-bottom: 1px solid var(--line);
 }
-.case-figures figure:first-child { grid-column: 1 / -1; }
+/* A section holding just one wide image */
+.case-figures--lead { grid-template-columns: 1fr; }
 .case-figures img {
   width: 100%;
   height: auto;
