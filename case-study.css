@@ -22,15 +22,15 @@
 /* ---------- Quick facts (role, team, timeline, platform) ---------- */
 .facts {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   margin: 0;
   border-bottom: 1px solid var(--line);
 }
 .facts > div {
   padding: clamp(18px, 2vw, 28px) clamp(16px, 2vw, 32px);
-  border-right: 1px solid var(--line);
+  border-right: 0; border-bottom: 1px solid var(--line);
 }
-.facts > div:last-child { border-right: 0; }
+.facts > div:last-child { border-bottom: 0; }
 .facts dt {
   color: var(--mint);
   font-size: 0.78rem;
