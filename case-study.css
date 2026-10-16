@@ -22,15 +22,15 @@
 /* ---------- Quick facts (role, team, timeline, platform) ---------- */
 .facts {
   display: grid;
-  grid-template-columns: 1fr 1.6fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   margin: 0;
   border-bottom: 1px solid var(--line);
 }
 .facts > div {
   padding: clamp(18px, 2vw, 28px) clamp(16px, 2vw, 32px);
-  border-right: 0; border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--line);
 }
-.facts > div:last-child { border-bottom: 0; }
+.facts > div:last-child { border-right: 0; }
 .facts dt {
   color: var(--mint);
   font-size: 0.78rem;
@@ -136,18 +136,18 @@
    TABLET / MOBILE
    ========================================================= */
 @media (max-width: 820px) {
-  /* Stack the three facts so a long Team list has room */
-  .facts { grid-template-columns: 1fr; }
-  .facts > div { border-right: 0; border-bottom: 1px solid var(--line); }
-  .facts > div:last-child { border-bottom: 0; }
- 
+  .facts { grid-template-columns: 1fr 1fr; }
+  .facts > div { border-bottom: 1px solid var(--line); }
+  .facts > div:nth-child(2n) { border-right: 0; }
+  .facts > div:nth-last-child(-n+2) { border-bottom: 0; }
+
   .case-section { grid-template-columns: 1fr; }
   .case-section > h2 {
     padding: 24px 22px 0;
     border-right: 0;
   }
   .case-section .content { padding: 16px 22px 32px; }
- 
+
   .case-figures { grid-template-columns: 1fr; padding: 28px 22px; }
   .case-outcome { padding: 28px 22px 40px; }
   .case-hero { padding: 28px 22px 34px; }
