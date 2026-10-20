@@ -16,24 +16,20 @@
 <body>
 
 <div class="frame">
-
-  <!-- ================= HEADER / NAV (same as the homepage) ================= -->
+  <!-- ================= HEADER / NAV ================= -->
   <header class="site-header">
-    <a class="logo" href="index.html" aria-label="Cara Oberfoell, home"><span>cara</span></a>
+    <a class="logo" href="#top" aria-label="Cara Oberfoell, home"><span>cara</span></a>
 
     <nav class="nav" id="nav" aria-label="Main">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#work">Work</a></li>
-        <li class="nav-secondary"><a href="mailto:your.email@example.com">Email me</a></li>
-        <li class="nav-secondary"><a href="resume.pdf">Resume</a></li>
+        <li><a href="#top">Home</a></li>
+        <!-- WORK LINK: points to the highlights section for now.
+             When you build a Work page, change it to href="work.html" -->
+        <li><a href="#work">Work</a></li>
+        <li><a href="Cara Oberfoell_resume.pdf" target="_blank" rel="noopener">Resume</a></li>
       </ul>
-      <button class="menu-button" id="menu-button" aria-expanded="false" aria-controls="nav" aria-label="Show more links">
-        <span></span><span></span><span></span>
-      </button>
     </nav>
   </header>
-
   <main>
 
     <!-- ================= TITLE ================= -->
@@ -109,12 +105,7 @@
 </div>
 
 <script>
-  var button = document.getElementById('menu-button');
-  var nav = document.getElementById('nav');
-  button.addEventListener('click', function () {
-    var open = nav.classList.toggle('open');
-    button.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
+
 </script>
 </body>
 </html>
