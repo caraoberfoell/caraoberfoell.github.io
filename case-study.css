@@ -183,3 +183,34 @@
   .facts > div { border-right: 0; border-bottom: 1px solid var(--line); }
   .facts > div:last-child { border-bottom: 0; }
 }
+
+/* =========================================================
+   TOP NAVIGATION (applies to every page)
+   Four links need more room than three, so on screens narrower than
+   1060px the header switches to the stacked layout (logo on top, links
+   below). These rules are last on purpose so they override style.css.
+   ========================================================= */
+@media (max-width: 1060px) {
+  .site-header { display: block; height: auto; }
+  .logo { display: block; padding-left: 0; height: 62px; text-align: center; }
+  .logo span { font-size: 84px; margin-top: 2px; }
+  .nav {
+    justify-content: center;
+    height: auto;
+    min-height: 62px;
+    padding: 8px 16px;
+    border-top: 1px solid var(--line);
+  }
+  .nav ul { flex-wrap: wrap; justify-content: center; gap: 8px 26px; }
+}
+
+/* Small phones: the four links sit in a tidy 2 x 2 block */
+@media (max-width: 480px) {
+  .nav ul {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    gap: 12px 44px;
+    padding-block: 6px;
+  }
+}
